@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrapper{
+    /* width:100vw; */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: none;
+    perspective: 10px;    
+}
+.container{
+    /* width:100%; */
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* jo container mein 3D game hoga waha wrna 2D ka trh behave karega */
+    transform-style: preserve-3d;   
+    z-index: -1; 
+}
+.Background{
+    transform: translateZ(-50px) scale(6.2);
+   
+}
+.foreground{
+    transform: translateZ(-30px) scale(4.2);
+}
+
+.Background , .foreground{
+    height: 100%;
+    width:100%;
+    position: absolute ;
+    z-index: -1;
+    object-fit: cover;
+} h1{
+    position: absolute;
+    top:12rem;
+     font-size: 4.5rem;
+     letter-spacing: 1.3rem;
+     color: azure;
+     text-shadow: 0 0 20px black;
+     border-radius: 15px;
+    
+     
+}
+h1:hover{
+    background-color: rgba(161, 202, 241,0.5);
+}
+.bg{
+    width:100%;
+    height:475px;
+    background-position:center;
+    /* move na kare image */
+    background-attachment: fixed;
+    /* pura width ke hissaab se apne aap ko adjust */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg1{
+    background-image: url(Images/sport-2.webp);
+}
+.bg2{
+    background-image: url(Images/sports-3.jpg);
+}
+ .bg3{
+    background-image: url(Images/sport-1.jpg);
+ }
+#section{
+    background-color:rgb(45 , 45, 45) ;
+    color:white;
+    width:100%;
+    height: 250px;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left:70px ;
+    padding-right:70px ;
+}
+ #heading{ 
+    margin-bottom: 0.8rem;
+ }
+ h2{
+    position: relative;
+    font-size: 3.5rem;
+    color: azure;
+    text-shadow: 0 0 20px black; 
+    transition:all 2s linear 0s;
+   
+ }
+ h2:hover{
+    /* kuch hebby bana hai :) */
+    transform: perspective(100px) translateZ(500px);
+ }#footer{
+    background-color: rgb(45 , 45, 45);
+    color: white;
+    text-align: center;
+    font-size: x-small;
+ }
